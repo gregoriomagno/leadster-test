@@ -1,11 +1,10 @@
 import GlobalStyles from "../styles/globals";
+import HomeTemplate from "../templates/homeTemplate";
 
 export default function Home() {
   return (
   
-      <div>
-        <h1>Teste</h1>
-      </div>
+   <HomeTemplate />
    
   );
 }
