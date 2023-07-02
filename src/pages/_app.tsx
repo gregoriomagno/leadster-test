@@ -4,6 +4,7 @@ import { ReactElement, ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "../styles/globals";
 import Head from "next/head";
+import theme from "../styles/theme";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -26,8 +27,9 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
         {/* <link rel="manifest" href="/manifest.json" /> */}
       </Head>
-
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
 
       <GlobalStyles />
     </>
