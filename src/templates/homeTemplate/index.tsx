@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Header from "../../components/Header";
 
 const HomeTemplate = () => {
   return (
-    <div>HomeTemplate</div>
-  )
-}
+    <>
+      <Header />
+      <main>. . .</main>
+      <footer>fotter</footer>
+    </>
+  );
+};
 
-export default HomeTemplate
+export default HomeTemplate;
