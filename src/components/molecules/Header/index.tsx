@@ -1,17 +1,12 @@
-import Image from "next/image";
 import React from "react";
 import * as S from "./styled";
+import Logo from "../../atoms/Logo";
 const Header = () => {
   return (
     <S.Header>
       <S.WrapperLogo>
         <a href="/">
-          <Image
-            src={"/assets/logo.png"}
-            alt="logo-leadster"
-            width={194}
-            height={42}
-          />
+        <Logo />
         </a>
       </S.WrapperLogo>
     </S.Header>
