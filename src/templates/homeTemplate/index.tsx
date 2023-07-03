@@ -1,12 +1,13 @@
 import React from "react";
-import Header from "../../components/Header";
+import Header from "../../components/molecules/Header";
+import Footer from "../../components/organisms/Footer";
 
 const HomeTemplate = () => {
   return (
     <>
       <Header />
       <main>. . .</main>
-      <footer>fotter</footer>
+      <Footer />
     </>
   );
 };
