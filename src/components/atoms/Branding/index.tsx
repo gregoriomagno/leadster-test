@@ -8,10 +8,10 @@ const Branding = () => {
       <Image
         src={"/assets/leadster_270.gif"}
         alt="logo-leadster"
-        width={194}
-        height={42}
+        width={250}
+        height={62}
       />
-      <p>Transformando visitantes em clientes.</p>
+      <S.SubTitle>Transformando visitantes em clientes.</S.SubTitle>
     </S.ContainerBranding>
   );
 };
