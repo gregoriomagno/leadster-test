@@ -8,6 +8,14 @@
   "dependencies": {
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-svg": "^16.1.18",
+    "styled-components": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.2",
+    "@types/react": "^18.2.14",
+    "babel-plugin-styled-components": "^2.1.4",
+    "typescript": "^5.1.6"
   }
 }
