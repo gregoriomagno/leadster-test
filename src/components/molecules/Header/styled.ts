@@ -7,7 +7,7 @@ export const Header = styled.header`
 `;
 export const WrapperLogo = styled.div`
   display: flex;
-  padding: 24px 0px;
+  padding: 28px 0px;
   justify-content: center;
   /* background-color:red; */
 `;
