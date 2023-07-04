@@ -3,7 +3,7 @@ import * as S from "./styled";
 import Image from "next/image";
 import ToolTip from "../../atoms/ToolTip";
 
-const Banner = () => {
+const BannerApresentation = () => {
   return (
     <S.Container>
       <S.Content>
@@ -32,4 +32,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default BannerApresentation;
