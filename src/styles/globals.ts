@@ -6,7 +6,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans','Open Sans', sans-serif;
   }
 
   html {
@@ -41,7 +41,7 @@ const GlobalStyles = createGlobalStyle`
       }
     }
 
-  }
+  
 `;
 
 export default GlobalStyles;
