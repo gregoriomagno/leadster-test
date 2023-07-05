@@ -3,7 +3,7 @@ import { ButtonHTMLAttributes } from "react";
 import * as S from "./styles";
 
 export type TypesButton = "flat" | "ghost" | "text";
-export type ThemeButton = "primary";
+export type ThemeButton = "primary" | 'black';
 
 export type ButtonProps = {
   children: React.ReactNode;

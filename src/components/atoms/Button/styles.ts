@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import styled, {css} from 'styled-components';
-import {ButtonProps, ThemeButton, TypesButton} from '.';
+import {ButtonProps, ThemeButton} from '.';
 import {shade, transparentize} from 'polished';
 import theme from '../../../styles/theme';
 
@@ -12,6 +12,11 @@ const modifiersTheme = {
 	primary: {
 		main: theme.colors.blue,
 		secondary: theme.colors.white,
+	},
+	black:{
+		main: theme.colors.black,
+		secondary: theme.colors.white,
+		
 	}
 	
 };
@@ -23,10 +28,10 @@ const modifiers = {
 
 		transition: background 0.2s ease;
 
-		&:hover {
+		&:not(.hover-disable):hover{
 			background:${modifiersTheme[themeButton!].secondary};
 			color:${modifiersTheme[themeButton!].main} ;
-			border: solid 2px ${modifiersTheme[themeButton!].main};
+			border: solid 1px ${modifiersTheme[themeButton!].main};
 
 		}
 
@@ -34,12 +39,14 @@ const modifiers = {
 	ghost: (themeButton: ThemeButton) => css`
 		background: transparent;
 		color: ${modifiersTheme[themeButton!].main};
-		border: 2px solid ${modifiersTheme[themeButton!].main};
+		border: 1px solid ${modifiersTheme[themeButton!].main};
 
 		transition: background 0.2s ease;
 
-		&:hover {
-			background: ${transparentize(0.95, modifiersTheme[themeButton!].main)};
+		&:not(.hover-disable):hover{
+			border: 1px solid ${theme.colors.blue};
+			color: ${theme.colors.blue};
+			background:${modifiersTheme[themeButton!].secondary};
 		}
 
 		&:active {
