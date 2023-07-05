@@ -99,6 +99,7 @@ const SectionContent = () => {
           {webinarShow?.map((webinar, index) => (
             <CardVideo
               key={index}
+              data={webinar}
               onClick={() => {
                 setVideoSelected(webinar);
                 setModalIsOpen(true);

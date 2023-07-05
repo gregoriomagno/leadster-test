@@ -3,15 +3,17 @@ import Image from "next/image";
 
 import * as S from "./styled";
 import { ReactSVG } from "react-svg";
+import { IWebinar } from "../../../Types/webinar";
 interface CardVideoProps {
   onClick: () => void;
+  data:IWebinar;
 }
-const CardVideo = ({ onClick }: CardVideoProps) => {
+const CardVideo = ({ onClick,data }: CardVideoProps) => {
   return (
     <S.ContainerCard onClick={onClick}>
       <S.ImageCard>
         <img
-          src={"/assets/thumbnail.png"}
+          src={data.thumbnail}
           alt="thumbnail"
           width={363}
           height={204}
@@ -21,7 +23,7 @@ const CardVideo = ({ onClick }: CardVideoProps) => {
         </S.OverlayCard>
       </S.ImageCard>
       <S.WrapperTitleCard>
-        <h2>Como aumentar sua Geração de Leads feat. Traktos</h2>
+        <h2>{data.title}</h2>
       </S.WrapperTitleCard>
     </S.ContainerCard>
   );
