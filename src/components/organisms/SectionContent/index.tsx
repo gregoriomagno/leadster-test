@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as S from "./styled";
 import Button from "../../atoms/Button";
 import ButtonDropdown from "../../atoms/ButtonDropdown";
@@ -7,10 +7,19 @@ import Pagination from "../../molecules/Pagination";
 import ModalPlayVideo from "../../molecules/ModalPlayVideo";
 import mock from "../../../Mock/videos.json";
 const SectionContent = () => {
+  const postsPerPage = 9;
+
+  function slicePostMock(page: number, amountPerPage: number) {
+    return mock.slice(
+      page * amountPerPage,
+      page * amountPerPage + amountPerPage
+    );
+  }
   const [indexItemSelected, setIndexItemSelected] = useState(3);
   const [actualPage, setActualPage] = useState(0);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [videoSelected, setVideoSelected] = useState("");
+  const [posts, setPosts] = useState(slicePostMock(actualPage, postsPerPage));
   const ItemsMenu = [
     "Agências",
     "Chatbot",
@@ -18,7 +27,9 @@ const SectionContent = () => {
     "Geração de Lead",
     "Mídia Paga",
   ];
-
+  useEffect(() => {
+    setPosts(slicePostMock(actualPage, postsPerPage));
+  }, [actualPage]);
   return (
     <S.Container>
       <S.ContentSection>
@@ -48,10 +59,10 @@ const SectionContent = () => {
         </S.RowHeaderConten>
         <hr />
         <S.Content>
-          {mock.map((card) => (
+          {posts.map((card) => (
             <CardVideo
               onClick={() => {
-                setVideoSelected(card.url)
+                setVideoSelected(card.url);
                 setModalIsOpen(true);
               }}
             />
@@ -62,12 +73,12 @@ const SectionContent = () => {
         <Pagination
           actualPage={actualPage}
           setNumberPage={setActualPage}
-          totalPage={5}
-          totalRegister={25}
+          totalPage={2}
+          totalRegister={mock.length}
         />
       </S.ContentSection>
       <ModalPlayVideo
-      videoSelected={videoSelected}
+        videoSelected={videoSelected}
         modalIsOpen={modalIsOpen}
         setModalIsOpen={setModalIsOpen}
       />
