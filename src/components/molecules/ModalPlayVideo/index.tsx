@@ -3,8 +3,9 @@ import Modal from "../../atoms/Modal";
 import IFrameVideo from "../../atoms/IFrameVideo";
 import * as S from "./styled";
 import DownloadBtn from "../../atoms/DownloadBtn";
+import { IWebinar } from "../../../Types/webinar";
 interface ModalPlayVideoProps {
-  videoSelected: string;
+  videoSelected: IWebinar;
   modalIsOpen: boolean;
   setModalIsOpen: (isOpen: boolean) => void;
 }
@@ -13,7 +14,7 @@ const ModalPlayVideo = ({
   modalIsOpen,
   setModalIsOpen,
 }: ModalPlayVideoProps) => {
-  const id = videoSelected?.substring(videoSelected.indexOf("=") + 1);
+  const id = videoSelected.url?.substring(videoSelected.url.indexOf("=") + 1);
   return (
     <Modal
       showOverlay={true}
@@ -27,8 +28,7 @@ const ModalPlayVideo = ({
       <S.HeaderModal>
         <p>
           <span>Webinar: </span>
-          Como aumentar sua
-          <br /> Geração de Leads feat. Traktos
+          {videoSelected.title}
         </p>
       </S.HeaderModal>
       <IFrameVideo embedId={id} />
@@ -37,8 +37,7 @@ const ModalPlayVideo = ({
           <S.SubTitle>Descrição</S.SubTitle>
           <hr />
           <S.TextDescription>
-            Lorem ipsum is placeholder text commonly used in the graphic, print,
-            and publishing industries for previewing layouts and visual mockups.
+            {videoSelected.description}
           </S.TextDescription>
         </S.Description>
         <S.ContainerDownloads>
