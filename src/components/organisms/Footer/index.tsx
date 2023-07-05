@@ -83,6 +83,12 @@ const Footer = () => {
           </div>
         </S.ColumContacts>
       </S.ContainerLinks>
+      <S.Divider />
+
+      <S.RowCopyright>
+        <p>Copyright © 2015 - 2022 Todos os direitos reservados | <a href={'/'}>Leadster</a></p>
+        <p>Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010-000 | Termos de uso</p>
+      </S.RowCopyright>
     </S.Fotter>
   );
 };

@@ -6,11 +6,12 @@ import CardVideo from "../../atoms/CardVideo";
 import Pagination from "../../molecules/Pagination";
 import ModalPlayVideo from "../../molecules/ModalPlayVideo";
 import mock from "../../../Mock/videos.json";
+import { IWebinar } from "../../../Types/webinar";
 const SectionContent = () => {
   const postsPerPage = 9;
 
   function slicePostMock(page: number, amountPerPage: number) {
-    return mock.slice(
+    return mock.videos.slice(
       page * amountPerPage,
       page * amountPerPage + amountPerPage
     );
@@ -18,8 +19,10 @@ const SectionContent = () => {
   const [indexItemSelected, setIndexItemSelected] = useState(3);
   const [actualPage, setActualPage] = useState(0);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [videoSelected, setVideoSelected] = useState("");
-  const [posts, setPosts] = useState(slicePostMock(actualPage, postsPerPage));
+  const [videoSelected, setVideoSelected] = useState<IWebinar>();
+  const [posts, setPosts] = useState<IWebinar[]>(
+    slicePostMock(actualPage, postsPerPage)
+  );
   const ItemsMenu = [
     "Agências",
     "Chatbot",
@@ -59,10 +62,10 @@ const SectionContent = () => {
         </S.RowHeaderConten>
         <hr />
         <S.Content>
-          {posts.map((card) => (
+          {posts.map((webinar) => (
             <CardVideo
               onClick={() => {
-                setVideoSelected(card.url);
+                setVideoSelected(webinar);
                 setModalIsOpen(true);
               }}
             />
@@ -74,14 +77,16 @@ const SectionContent = () => {
           actualPage={actualPage}
           setNumberPage={setActualPage}
           totalPage={2}
-          totalRegister={mock.length}
+          totalRegister={mock.videos.length}
         />
       </S.ContentSection>
-      <ModalPlayVideo
-        videoSelected={videoSelected}
-        modalIsOpen={modalIsOpen}
-        setModalIsOpen={setModalIsOpen}
-      />
+      {videoSelected && (
+        <ModalPlayVideo
+          videoSelected={videoSelected}
+          modalIsOpen={modalIsOpen}
+          setModalIsOpen={setModalIsOpen}
+        />
+      )}
     </S.Container>
   );
 };

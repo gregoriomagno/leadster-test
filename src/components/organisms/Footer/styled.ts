@@ -22,7 +22,7 @@ export const ContainerLinks = styled.div`
   @media screen and (max-width: 760px) {
     flex-direction: column;
     align-items: center;
-    text-align:center ;
+    text-align: center;
   }
 `;
 export const ListLiks = styled.ul`
@@ -76,4 +76,26 @@ export const ListSocialICons = styled.div`
   display: flex;
   gap: 10px;
   margin-bottom: 12px;
+`;
+export const Divider = styled.hr`
+  width: 100%;
+`;
+
+export const RowCopyright = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    width: 100%;
+    font-size: 16px;
+    color: ${theme.colors.grey};
+    justify-content: space-evenly;
+    a {
+      text-decoration: none;
+      color: ${theme.colors.blue};
+    }
+    @media screen and (max-width: 1300px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  `}
 `;
