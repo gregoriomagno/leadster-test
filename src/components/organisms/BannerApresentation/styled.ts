@@ -61,12 +61,10 @@ export const WrapperIconTextMain = styled.div`
     }
   }
   @media screen and (max-width: 493px) {
-   
     img {
-     display:none ;
+      display: none;
     }
   }
-  
 `;
 export const lineDivider = styled.hr`
   ${({ theme }) => css`
@@ -82,6 +80,6 @@ export const TextDescription = styled.p`
     color: ${theme.colors.black};
     @media screen and (max-width: 770px) {
       font-size: 16px;
-  }
+    }
   `}
 `;
