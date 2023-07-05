@@ -86,6 +86,7 @@ export const RowCopyright = styled.div`
     display: flex;
     width: 100%;
     font-size: 16px;
+    text-align: center;
     color: ${theme.colors.grey};
     justify-content: space-evenly;
     a {

@@ -140,8 +140,48 @@
       "title": "Como aumentar sua Geração de Leads feat. Traktos",
       "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
       "thumbnail": "/public/assets/thumbnail.png",
-      "categoria": "midiaPaga",
+      "categoria": "gerecaoLead",
       "url": "https://www.youtube.com/watch?v=gK8uPCkka7c"
+    },
+    {
+      "id": 17,
+
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "midiaPaga",
+
+      "url": "https://www.youtube.com/watch?v=XAakjkrMHOs"
+    },
+    {
+      "id": 18,
+
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "midiaPaga",
+
+      "url": "https://www.youtube.com/watch?v=XAakjkrMHOs"
+    },
+    {
+      "id": 19,
+
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "agencias",
+
+      "url": "https://www.youtube.com/watch?v=XAakjkrMHOs"
+    },
+    {
+      "id": 20,
+
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "agencias",
+
+      "url": "https://www.youtube.com/watch?v=XAakjkrMHOs"
     }
   ]
 }

@@ -40,7 +40,7 @@ export const TextMain = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 770px) {
     font-size: 6rem;
   }
 `;
@@ -48,11 +48,11 @@ export const WrapperIconTextMain = styled.div`
   position: absolute;
   top: -12px;
   right: 3px;
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 770px) {
     top: 82px;
     right: 120px;
   }
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 770px) {
     top: -8px;
     right: 4px;
     img {
@@ -60,6 +60,13 @@ export const WrapperIconTextMain = styled.div`
       height: 28px;
     }
   }
+  @media screen and (max-width: 493px) {
+   
+    img {
+     display:none ;
+    }
+  }
+  
 `;
 export const lineDivider = styled.hr`
   ${({ theme }) => css`
@@ -73,7 +80,7 @@ export const TextDescription = styled.p`
   ${({ theme }) => css`
     font-size: 19px;
     color: ${theme.colors.black};
-    @media screen and (max-width: 760px) {
+    @media screen and (max-width: 770px) {
       font-size: 16px;
   }
   `}
