@@ -6,6 +6,13 @@ export const Container = styled.section`
     overflow: hidden;
     width: 100%;
     background-color: ${theme.colors.light_blue};
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 60px 0px;
+      /* overflow: scroll; */
+    }
   `}
 `;
 
@@ -15,6 +22,13 @@ export const ContentLeft = styled.div`
   width: 50%;
   /* background-color: red; */
   justify-content: center;
+  overflow: hidden;
+  @media screen and (max-width: 1200px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 730px) {
+    width: 100%;
+  }
 `;
 
 export const Content = styled.div`
@@ -23,6 +37,7 @@ export const Content = styled.div`
 `;
 export const WrapperImage = styled.div`
   z-index: 3;
+
 `;
 export const ShadowShapeThree = styled.div`
   ${({ theme }) => css`
@@ -33,8 +48,8 @@ export const ShadowShapeThree = styled.div`
       #e3f0ff,
       ${theme.colors.light_blue}
     );
-    border-radius: 80px!important;
-    transform:rotate(-45deg)!important;
+    border-radius: 80px !important;
+    transform: rotate(-45deg) !important;
     left: -550px;
     top: 200px;
     width: 1000px;
@@ -51,15 +66,23 @@ export const ContentRight = styled.div`
   hr {
     width: 70%;
   }
+  @media screen and (max-width: 1200px) {
+    align-items: center;
+  }
+  
 `;
 export const TitleContainerRight = styled.h2`
   ${({ theme }) => css`
-    font-size: 38px !important;
+    font-size: 3.8rem !important;
     font-weight: 500;
     color: ${theme.colors.black};
     b {
       font-weight: 700;
     }
+    @media screen and (max-width: 1200px) {
+    text-align:center ;
+  }
+   
   `}
 `;
 
@@ -72,14 +95,26 @@ export const SubTitleContainerRight = styled.h3`
     b {
       font-weight: 700;
     }
+    @media screen and (max-width: 1200px) {
+    text-align:center ;
+  }
   `}
 `;
 
 export const WrapperRating = styled.div`
   display: flex;
 
-
   flex-direction: column;
+
+  @media screen and (max-width: 680px) {
+    div{
+      flex-direction: column;
+      gap:10px;
+      align-items: center;
+      text-align:center ;
+    }
+   
+  }
 `;
 
 export const RowRatingButton = styled.div`
@@ -93,15 +128,19 @@ export const RowRatingButton = styled.div`
   img {
     margin: 0px 16px 16px 16px;
   }
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    justify-content: center;
+  }
 `;
 export const ContainerNoCardScore = styled.div`
   ${({ theme }) => css`
     display: flex;
     width: 100%;
-    align-items:center ;
-    gap:4px;
+    align-items: center;
+    gap: 4px;
     p {
-      font-size:15px ;
+      font-size: 15px;
       color: ${theme.colors.balck};
     }
   `}
