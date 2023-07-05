@@ -46,13 +46,15 @@ const Footer = () => {
     <S.Fotter>
       <Branding />
       <S.ContainerLinks>
-        {listLinks.map((sectionLinks: ISectionLinks) => (
-          <S.ColumLinks>
+        {listLinks.map((sectionLinks: ISectionLinks,index) => (
+          <S.ColumLinks key={index}>
             <S.TitleSectionLinks>{sectionLinks.title}</S.TitleSectionLinks>
             <S.ListLiks>
               {sectionLinks.links.map((link: ITextLink, index) => (
                 <li key={index}>
-                  <S.Link href={link.url}>{link.title}</S.Link>
+                  <S.Link href={link.url} key={index}>
+                    {link.title}
+                  </S.Link>
                 </li>
               ))}
             </S.ListLiks>
@@ -86,8 +88,14 @@ const Footer = () => {
       <S.Divider />
 
       <S.RowCopyright>
-        <p>Copyright © 2015 - 2022 Todos os direitos reservados | <a href={'/'}>Leadster</a></p>
-        <p>Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010-000 | Termos de uso</p>
+        <p>
+          Copyright © 2015 - 2022 Todos os direitos reservados |{" "}
+          <a href={"/"}>Leadster</a>
+        </p>
+        <p>
+          Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010-000 |
+          Termos de uso
+        </p>
       </S.RowCopyright>
     </S.Fotter>
   );
