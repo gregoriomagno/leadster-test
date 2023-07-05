@@ -40,7 +40,7 @@ export const ButtonDownload = styled.button<ButtonDownloadProps>`
     }
     span {
       font-size: 14px;
-      padding: 0px 10px;
+      padding: 6px 10px;
     }
   `}
 `;
