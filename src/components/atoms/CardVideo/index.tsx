@@ -3,19 +3,22 @@ import Image from "next/image";
 
 import * as S from "./styled";
 import { ReactSVG } from "react-svg";
-const CardVideo = () => {
+interface CardVideoProps {
+  onClick: () => void;
+}
+const CardVideo = ({ onClick }: CardVideoProps) => {
   return (
-    <S.ContainerCard>
+    <S.ContainerCard onClick={onClick}>
       <S.ImageCard>
-      <img
-        src={"/assets/thumbnail.png"}
-        alt="thumbnail"
-        width={363}
-        height={204}
-      />
-      <S.OverlayCard className="overlay">
-      <ReactSVG src={"/assets/play.svg"} />
-      </S.OverlayCard>
+        <img
+          src={"/assets/thumbnail.png"}
+          alt="thumbnail"
+          width={363}
+          height={204}
+        />
+        <S.OverlayCard className="overlay">
+          <ReactSVG src={"/assets/play.svg"} />
+        </S.OverlayCard>
       </S.ImageCard>
       <S.WrapperTitleCard>
         <h2>Como aumentar sua Geração de Leads feat. Traktos</h2>
