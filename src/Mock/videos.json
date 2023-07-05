@@ -1,70 +1,147 @@
-[
-  {
-    "categoria": "chatbot",
-    "url": "https://www.youtube.com/watch?v=XIBdJjahUkM"
-  },
-  {
-    "categoria": "marketing",
-    "url": "https://www.youtube.com/watch?v=nPlyLHqDaJw"
-  },
-  {
-    "categoria": "marketing",
-    "url": "https://www.youtube.com/watch?v=gK8uPCkka7c"
-  },
-  {
-    "categoria": "marketing",
-    "url": "https://www.youtube.com/watch?v=b0KlEQ7YLQ4"
-  },
-  {
-    "categoria": "midiaPaga",
-    "url": "https://www.youtube.com/watch?v=T33DiRoMo5c"
-  },
-  {
-    "categoria": "midiaPaga",
-    "url": "https://www.youtube.com/watch?v=GcvZ9dWhRks"
-  },
-  {
-    "categoria": "midiaPaga",
-    "url": "https://www.youtube.com/watch?v=nR_3qSvL6bM"
-  },
-  {
-    "categoria": "midiaPaga",
-    "url": "https://www.youtube.com/watch?v=XAakjkrMHOs"
-  },
-  {
-    "categoria": "midiaPaga",
-    "url": "https://www.youtube.com/watch?v=gK8uPCkka7c"
-  },
-  {
-    "categoria": "marketing",
-    "url": "https://www.youtube.com/watch?v=nPlyLHqDaJw"
-  },
-  {
-    "categoria": "marketing",
-    "url": "https://www.youtube.com/watch?v=gK8uPCkka7c"
-  },
-  {
-    "categoria": "marketing",
-    "url": "https://www.youtube.com/watch?v=b0KlEQ7YLQ4"
-  },
-  {
-    "categoria": "midiaPaga",
-    "url": "https://www.youtube.com/watch?v=T33DiRoMo5c"
-  },
-  {
-    "categoria": "midiaPaga",
-    "url": "https://www.youtube.com/watch?v=GcvZ9dWhRks"
-  },
-  {
-    "categoria": "midiaPaga",
-    "url": "https://www.youtube.com/watch?v=nR_3qSvL6bM"
-  },
-  {
-    "categoria": "midiaPaga",
-    "url": "https://www.youtube.com/watch?v=XAakjkrMHOs"
-  },
-  {
-    "categoria": "midiaPaga",
-    "url": "https://www.youtube.com/watch?v=gK8uPCkka7c"
-  }
-]
+{
+  "videos": [
+    {
+      "id": 1,
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "chatbot",
+      "url": "https://www.youtube.com/watch?v=XIBdJjahUkM"
+    },
+    {
+      "id": 2,
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "marketing",
+      "url": "https://www.youtube.com/watch?v=nPlyLHqDaJw"
+    },
+    {
+      "id": 2,
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "marketing",
+      "url": "https://www.youtube.com/watch?v=gK8uPCkka7c"
+    },
+    {
+      "id": 3,
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "marketing",
+      "url": "https://www.youtube.com/watch?v=b0KlEQ7YLQ4"
+    },
+    {
+      "id": 4,
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "midiaPaga",
+      "url": "https://www.youtube.com/watch?v=T33DiRoMo5c"
+    },
+    {
+      "id": 5,
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "midiaPaga",
+      "url": "https://www.youtube.com/watch?v=GcvZ9dWhRks"
+    },
+    {
+      "id": 6,
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "midiaPaga",
+      "url": "https://www.youtube.com/watch?v=nR_3qSvL6bM"
+    },
+    {
+      "id": 7,
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "midiaPaga",
+      "url": "https://www.youtube.com/watch?v=XAakjkrMHOs"
+    },
+    {
+      "id": 8,
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "midiaPaga",
+      "url": "https://www.youtube.com/watch?v=gK8uPCkka7c"
+    },
+    {
+      "id": 9,
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "marketing",
+      "url": "https://www.youtube.com/watch?v=nPlyLHqDaJw"
+    },
+    {
+      "id": 10,
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "marketing",
+      "url": "https://www.youtube.com/watch?v=gK8uPCkka7c"
+    },
+    {
+      "id": 11,
+
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "marketing",
+      "url": "https://www.youtube.com/watch?v=b0KlEQ7YLQ4"
+    },
+    {
+      "id": 12,
+
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "midiaPaga",
+      "url": "https://www.youtube.com/watch?v=T33DiRoMo5c"
+    },
+    {
+      "id": 13,
+
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "midiaPaga",
+      "url": "https://www.youtube.com/watch?v=GcvZ9dWhRks"
+    },
+    {
+      "id": 14,
+
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "midiaPaga",
+      "url": "https://www.youtube.com/watch?v=nR_3qSvL6bM"
+    },
+    {
+      "id": 15,
+
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "midiaPaga",
+
+      "url": "https://www.youtube.com/watch?v=XAakjkrMHOs"
+    },
+    {
+      "id": 16,
+
+      "title": "Como aumentar sua Geração de Leads feat. Traktos",
+      "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      "thumbnail": "/public/assets/thumbnail.png",
+      "categoria": "midiaPaga",
+      "url": "https://www.youtube.com/watch?v=gK8uPCkka7c"
+    }
+  ]
+}
