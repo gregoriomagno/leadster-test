@@ -19,6 +19,11 @@ export const ContainerLinks = styled.div`
   margin: 0px auto;
   justify-content: center;
   gap: 24px;
+  @media screen and (max-width: 760px) {
+    flex-direction: column;
+    align-items: center;
+    text-align:center ;
+  }
 `;
 export const ListLiks = styled.ul`
   list-style-type: none;
@@ -27,7 +32,6 @@ export const ListLiks = styled.ul`
   }
 `;
 export const TitleSectionLinks = styled.p`
- 
   color: #2c3e50 !important;
   font-weight: 600;
   font-size: 18px;
@@ -52,7 +56,7 @@ export const ContainerInfContacts = styled.div`
     display: flex;
     flex-direction: column;
     gap: 15px;
-  
+
     p {
       color: ${theme.colors.grey};
       span {
@@ -69,8 +73,7 @@ export const ColumContacts = styled.div`
   gap: 18px;
 `;
 export const ListSocialICons = styled.div`
-    display: flex;
-    gap:10px;
-    margin-bottom: 12px;
-
-`
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+`;

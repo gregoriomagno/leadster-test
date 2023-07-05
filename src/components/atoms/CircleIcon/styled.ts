@@ -5,7 +5,7 @@ export const Container = styled.div`
     display: flex;
     cursor: pointer;
     :hover {
-      background: ${theme.colors.light_blue};
+      background: ${theme.colors.tiffany_blue};
 
       svg path {
         color: ${theme.colors.white};
