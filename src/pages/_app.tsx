@@ -18,12 +18,12 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   return (
     <>
       <Head>
-        <title>Next</title>
+        <title>Leadster</title>
         <meta
           name="description"
-          content="A simple project starter to work with Typescript, React, NextJS and Styled Components"
+          content="Landing page - teste leadster"
         />
-        <link rel="icon" href="/assets/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
 
         {/* <link rel="manifest" href="/manifest.json" /> */}
       </Head>
