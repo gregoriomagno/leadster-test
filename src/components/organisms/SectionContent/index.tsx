@@ -4,11 +4,13 @@ import Button from "../../atoms/Button";
 import ButtonDropdown from "../../atoms/ButtonDropdown";
 import CardVideo from "../../atoms/CardVideo";
 import Pagination from "../../molecules/Pagination";
+import ModalPlayVideo from "../../molecules/ModalPlayVideo";
+import mock from "../../../Mock/videos.json";
 const SectionContent = () => {
   const [indexItemSelected, setIndexItemSelected] = useState(3);
-
-  const [actualPage,setActualPage] = useState(0)
-
+  const [actualPage, setActualPage] = useState(0);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [videoSelected, setVideoSelected] = useState("");
   const ItemsMenu = [
     "Agências",
     "Chatbot",
@@ -16,7 +18,6 @@ const SectionContent = () => {
     "Geração de Lead",
     "Mídia Paga",
   ];
-
 
   return (
     <S.Container>
@@ -47,21 +48,29 @@ const SectionContent = () => {
         </S.RowHeaderConten>
         <hr />
         <S.Content>
-          <CardVideo />
-          <CardVideo />
-          <CardVideo />
-          <CardVideo />
-          <CardVideo />
-          <CardVideo />
+          {mock.map((card) => (
+            <CardVideo
+              onClick={() => {
+                setVideoSelected(card.url)
+                setModalIsOpen(true);
+              }}
+            />
+          ))}
         </S.Content>
         <hr />
-      
-    
-          <Pagination  actualPage={actualPage} setNumberPage={setActualPage} totalPage={5} totalRegister={25}/>
 
-        
-       
+        <Pagination
+          actualPage={actualPage}
+          setNumberPage={setActualPage}
+          totalPage={5}
+          totalRegister={25}
+        />
       </S.ContentSection>
+      <ModalPlayVideo
+      videoSelected={videoSelected}
+        modalIsOpen={modalIsOpen}
+        setModalIsOpen={setModalIsOpen}
+      />
     </S.Container>
   );
 };
