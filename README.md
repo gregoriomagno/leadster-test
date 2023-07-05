@@ -1,4 +1,6 @@
+<h1 align="center">Desafio Leadster Front-end</h1>
 
+- [Deploy da aplicação](https://leadster-test-hazel.vercel.app/)
 # 1 - Decisões
 
 Inicialmente decidi oque seria usado nesse projeto, tendo em vista os requisitos descritos na documentação do teste, por tanto escolhi trabalhar com o nextjs, typeScript e styled Components. Após definir as tecnologias, analisei o layout e construí um plano de atuação, definindo quais partes seriam criadas primeiro e estimando o tempo que seria gasto com isso.
