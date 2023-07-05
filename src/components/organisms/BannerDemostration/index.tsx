@@ -2,7 +2,6 @@ import React from "react";
 import * as S from "./styled";
 import Image from "next/image";
 import Button from "../../atoms/Button";
-import { ReactSVG } from "react-svg";
 
 const BannerDemostration = () => {
   return (
