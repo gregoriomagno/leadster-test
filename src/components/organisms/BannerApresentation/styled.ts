@@ -34,16 +34,32 @@ export const WrapperTextMain = styled.div`
   line-height: 94px;
 `;
 export const TextMain = styled.h1`
-  font-size: 96px;
+  font-size: 9.6rem;
   font-weight: bold;
   background: -webkit-linear-gradient(45deg, #2c83fb, #1f76f0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media screen and (max-width: 760px) {
+    font-size: 6rem;
+  }
 `;
 export const WrapperIconTextMain = styled.div`
   position: absolute;
   top: -12px;
   right: 3px;
+  @media screen and (max-width: 760px) {
+    top: 82px;
+    right: 120px;
+  }
+  @media screen and (max-width: 760px) {
+    top: -8px;
+    right: 4px;
+    img {
+      width: 40px;
+      height: 28px;
+    }
+  }
 `;
 export const lineDivider = styled.hr`
   ${({ theme }) => css`
@@ -57,5 +73,8 @@ export const TextDescription = styled.p`
   ${({ theme }) => css`
     font-size: 19px;
     color: ${theme.colors.black};
+    @media screen and (max-width: 760px) {
+      font-size: 16px;
+  }
   `}
 `;

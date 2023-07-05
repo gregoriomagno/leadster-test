@@ -53,5 +53,19 @@ export const ContainerDownloads = styled.div`
   div{
     display:flex ;
     gap:5px;
+    @media screen and (max-width: 1300px) {
+     button{
+      div{
+        display:none;
+      }
+     }
+      
+    }
+    @media screen and (max-width: 1050px) {
+      flex-direction: column ;
+      align-items: center ;
+      
+    }
+    
   }
 `;

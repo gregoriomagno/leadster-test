@@ -19,6 +19,11 @@ export const ContainerLinks = styled.div`
   margin: 0px auto;
   justify-content: center;
   gap: 24px;
+  @media screen and (max-width: 760px) {
+    flex-direction: column;
+    align-items: center;
+    text-align:center ;
+  }
 `;
 export const ListLiks = styled.ul`
   list-style-type: none;
