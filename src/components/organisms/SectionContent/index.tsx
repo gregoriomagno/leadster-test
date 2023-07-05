@@ -7,50 +7,84 @@ import Pagination from "../../molecules/Pagination";
 import ModalPlayVideo from "../../molecules/ModalPlayVideo";
 import mock from "../../../Mock/videos.json";
 import { IWebinar } from "../../../Types/webinar";
+import { ICategoria } from "../../../styles/filter";
+
+const ItemsMenu: ICategoria[] = [
+  {
+    label: "Agências",
+    value: "agencias",
+  },
+  {
+    label: "Chatbot",
+    value: "chatbot",
+  },
+  {
+    label: "Marketing digital",
+    value: "marketing",
+  },
+  {
+    label: "Geração de Lead",
+    value: "gerecaoLead",
+  },
+  {
+    label: "Mídia Paga",
+    value: "midiaPaga",
+  },
+];
 const SectionContent = () => {
   const postsPerPage = 9;
 
-  function slicePostMock(page: number, amountPerPage: number) {
-    return mock.videos.slice(
+  function slicePostMock(
+    webinars: IWebinar[],
+    page: number,
+    amountPerPage: number
+  ) {
+    return webinars?.slice(
       page * amountPerPage,
       page * amountPerPage + amountPerPage
     );
   }
-  const [indexItemSelected, setIndexItemSelected] = useState(3);
+
+  const [categorySelected, setCategorySelected] = useState<ICategoria>();
   const [actualPage, setActualPage] = useState(0);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [videoSelected, setVideoSelected] = useState<IWebinar>();
-  const [posts, setPosts] = useState<IWebinar[]>(
-    slicePostMock(actualPage, postsPerPage)
+  const [webinarFiltered, setWebinarFiltered] = useState<IWebinar[]>(
+    mock.videos
   );
-  const ItemsMenu = [
-    "Agências",
-    "Chatbot",
-    "Marketing digital",
-    "Geração de Lead",
-    "Mídia Paga",
-  ];
+  const [webinarShow, setWebinarShow] = useState<IWebinar[]>(mock.videos);
+
   useEffect(() => {
-    setPosts(slicePostMock(actualPage, postsPerPage));
-  }, [actualPage]);
+    setWebinarShow(slicePostMock(webinarFiltered, actualPage, postsPerPage));
+  }, [actualPage, webinarFiltered]);
+
+  useEffect(() => {
+    setActualPage(0);
+    if (categorySelected) {
+      setWebinarFiltered(
+        mock.videos.filter(
+          (item: IWebinar) => item.categoria === categorySelected?.value
+        )
+      );
+    }
+  }, [categorySelected]);
+ 
   return (
     <S.Container>
       <S.ContentSection>
         <S.RowHeaderConten>
           <ul>
-            {ItemsMenu.map((item, index) => (
+            {ItemsMenu.map((item: ICategoria, index) => (
               <li key={index}>
                 <Button
-                  className={indexItemSelected === index && "hover-disable"}
-                  typeButton={indexItemSelected === index ? "flat" : "ghost"}
-                  themeButton={
-                    indexItemSelected === index ? "primary" : "black"
-                  }
+                  className={categorySelected === item && "hover-disable"}
+                  typeButton={categorySelected === item ? "flat" : "ghost"}
+                  themeButton={categorySelected === item ? "primary" : "black"}
                   onClick={() => {
-                    setIndexItemSelected(index);
+                    setCategorySelected(item);
                   }}
                 >
-                  {item}
+                  {item.label}
                 </Button>
               </li>
             ))}
@@ -62,8 +96,9 @@ const SectionContent = () => {
         </S.RowHeaderConten>
         <hr />
         <S.Content>
-          {posts.map((webinar) => (
+          {webinarShow?.map((webinar, index) => (
             <CardVideo
+              key={index}
               onClick={() => {
                 setVideoSelected(webinar);
                 setModalIsOpen(true);
@@ -76,8 +111,12 @@ const SectionContent = () => {
         <Pagination
           actualPage={actualPage}
           setNumberPage={setActualPage}
-          totalPage={2}
-          totalRegister={mock.videos.length}
+          totalPage={
+            webinarFiltered?.length > 0
+              ? Math.ceil(webinarFiltered?.length / postsPerPage)
+              : 1
+          }
+          totalRegister={webinarFiltered?.length}
         />
       </S.ContentSection>
       {videoSelected && (

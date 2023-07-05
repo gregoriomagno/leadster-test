@@ -21,27 +21,31 @@ const Pagination = ({
   setNumberPage,
   actualPage,
 }: PaginationPros) => {
-  const [selectedElement, setSelectedElement] = useState<number>(actualPage);
-  const maxPageNumbers: number = totalPage < 10 ? totalPage : 10;
+  const [maxPageNumbers, setMaxPageNumbers] = useState<number>(
+    totalPage < 10 ? totalPage : 10
+  );
   const [pages, setPages] = useState<number[]>(
     new Array(maxPageNumbers).fill(0).map((n, index) => n + index)
   );
 
   useEffect(() => {
-    if (
-      selectedElement < pages[0] ||
-      selectedElement > pages[pages.length - 1]
-    ) {
+    if (actualPage < pages[0] || actualPage > pages[pages.length - 1]) {
       setPages(
         new Array(maxPageNumbers)
-          .fill(selectedElement)
-          .map((n, index) => selectedElement - index)
+          .fill(actualPage)
+          .map((n, index) => actualPage - index)
           .reverse()
       );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedElement]);
+  }, [actualPage]);
+  useEffect(() => {
+    setPages(new Array(maxPageNumbers).fill(0).map((n, index) => n + index));
+  }, [maxPageNumbers]);
 
+  useEffect(() => {
+    setMaxPageNumbers(totalPage < 10 ? totalPage : 10);
+  }, [totalPage]);
   return (
     <S.Pagination>
       <span>Página</span>
@@ -49,8 +53,8 @@ const Pagination = ({
         {pages.map((page, index) => (
           <button
             key={index}
-            className={page === selectedElement ? "actived" : ""}
-            onClick={() => (setSelectedElement(page), setNumberPage(page))}
+            className={page === actualPage ? "actived" : ""}
+            onClick={() => setNumberPage(page)}
           >
             {page + 1}
           </button>
