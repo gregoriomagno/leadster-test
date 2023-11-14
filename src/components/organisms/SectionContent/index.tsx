@@ -89,10 +89,10 @@ const SectionContent = () => {
               </li>
             ))}
           </ul>
-          <S.WrapperButtonDropdown>
+          {/* <S.WrapperButtonDropdown>
             <p>Ordenar por</p>
             <ButtonDropdown options={["Data de Publicação"]} />
-          </S.WrapperButtonDropdown>
+          </S.WrapperButtonDropdown> */}
         </S.RowHeaderConten>
         <hr />
         <S.Content>
